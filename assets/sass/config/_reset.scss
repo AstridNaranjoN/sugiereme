@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: $purpleThree;
+}
+
+p{
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+    &:focus{
+        text-decoration: none;
+    }
+}
+
+ul{
+    padding: 0;
+    margin:0;
+} 
+
+li{
+    list-style: none;
+}
+
+h1,
+h2,
+h3{
+    margin:0;
+}
+
+.loader{
+    background-image: url("../images/backgrounds/background-main.jpg");
+    background-size: cover;
+    width:100%;
+    min-height:100vh;
+    position:fixed;
+    display:flex;
+    z-index: 999;
+
+    img{
+        margin:auto;
+        width:300px;
+
+        animation: opacityLogo 2s infinite;
+    }
+}
+
+@keyframes opacityLogo{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}

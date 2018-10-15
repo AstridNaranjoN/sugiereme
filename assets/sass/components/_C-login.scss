@@ -1,0 +1,140 @@
+.wrap-login{
+    background-image: url("../images/backgrounds/background-main.jpg");
+    background-size: cover;
+    width:100%;
+    min-height:100vh;
+}
+
+.container-logo{
+    text-align: center;
+    margin-top:40px;
+
+    img{
+        width:300px;
+
+        animation: animateLogo 3s 3.6s;
+    }
+}
+
+.container-form{
+    width:80%;
+    margin:auto;
+    margin-top:30px;
+
+    .box-form{
+        background-color:#fff;
+        border-radius:5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        margin-bottom:15px;
+
+        @include flex;
+
+        &__icon-user{
+            background-color:$white;
+            border-radius:4px 0 0 4px;
+            padding:5px;
+
+            img{
+                width:30px;
+            }
+        }
+        input{
+            border-radius:0px 4px 4px 0px;
+            width:100%;
+            padding:10px;
+            border:0;
+        }
+    }
+
+    &__remember{
+        color: $white;
+        text-align: right;
+        display:block;
+    }
+}
+
+.login-social-networks{
+    width:80%;
+    margin:auto;
+    margin-top:20px;
+
+    &__primary{
+        background-color: $purpleOne;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+        padding:15px;
+        display:block;
+        color:$white;
+        text-align: center;
+        border-radius:40px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size:18px;
+
+        &:focus{
+            color:$white;
+        }
+    }
+
+    .group-social-networks{
+        margin-top:20px;
+
+        @include flex;
+
+        &__btn:first-child{
+            margin-right:5px;
+        }
+
+        &__btn:last-child{
+            margin-left:5px;
+        }
+
+        &__btn{
+            box-shadow:0 0 10px rgba(0,0,0,0.2);    
+            text-align: center;
+            border-radius:40px;
+            width:50%;
+            padding:7px;
+
+            img{
+                width:35px;
+            }
+
+            p{
+                color:$white;
+                font-weight: 300;
+                font-size:11px;
+            }
+        }
+
+        &__gmail{
+            background-color:$redStrong;
+        }
+
+        &__facebook{
+            background-color:$blueStrong;
+        }
+    }
+}
+
+@keyframes animateLogo{
+    10%{
+        transform: rotate(0deg);
+        transform-origin: bottom 0%;
+    }
+    15%{
+        transform: rotate(3deg);
+        transform-origin: bottom 0%;
+    }
+    20%{
+        transform: rotate(-3deg);
+        transform-origin: bottom 0%;
+    }
+    25%{
+        transform: rotate(3deg);
+        transform-origin: bottom 0%;
+    }
+    30%{
+        transform: rotate(0deg);
+        transform-origin: bottom 0%;
+    }
+}

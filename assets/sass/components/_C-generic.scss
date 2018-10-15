@@ -1,0 +1,59 @@
+.wrap-main{
+    overflow: hidden;
+    min-height:100vh;
+    width:100%;
+    position: relative;
+
+    &:before{
+        content:"";
+        background:#51c4bf;
+        position: absolute;
+        z-index: 9999;
+        border-radius: 50%;
+
+        width: 300vmax; 
+        height: 284vmax; 
+        bottom: -135vmax;
+        left: -144vmax;
+
+        transform: scale(0);
+        transition: transform 0.8s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+}
+
+.wrap-main.openContact{
+    &:before{
+        transform: scale(1);
+    }
+}
+
+.header-phone{
+    padding:5px;
+
+    @include flex;
+
+    &__left{
+        width: 33.3%;
+        img{
+            width:100px;
+        }
+    }
+
+    &__center{
+        width: 33.3%;
+        p{
+            text-align: center;
+            color:#fff;
+            font-weight: 700;
+
+        }
+    }
+
+    &__right{
+        width: 33.3%;
+        text-align: right;
+        img{
+            width:50px;
+        }
+    }
+}

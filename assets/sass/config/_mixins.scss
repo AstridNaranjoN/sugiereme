@@ -1,0 +1,33 @@
+@mixin transition($value){
+    transition: $value;
+}
+
+@mixin flex{
+    display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    -o-display:flex;
+    -webkit-display:flex;
+}
+
+@mixin grid{
+	display:grid;
+	-moz-display:grid;
+	-ms-display:grid;
+	-o-display:grid;
+	-webkit-display:grid;
+}
+
+@mixin filter($value...){
+	filter: $value;
+	-moz-filter: $value;
+	-o-filter: $value;
+	-ms-filter: $value;
+	-webkit-filter: $value;
+}
+
+@mixin from($breakpoint){
+	@media screen and (max-width: map-get($breakpoints, $breakpoint)){
+		@content;
+	}
+}

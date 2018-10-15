@@ -1,0 +1,165 @@
+.wrap-category{
+    background-color: $purpleOne;
+    min-height:100vh;
+
+}
+
+.group-slider{
+    animation: initialCategory 1.5s 2.4s forwards;
+    opacity: 0;
+
+    &__close{
+        padding:10px;
+
+        img{
+            margin-top:15px;
+            width:50px;
+        }
+    }
+
+    &__tlt{
+        text-align: center;
+        color:$white;
+        font-weight: 300;
+        font-size:25px;
+        width:50%;
+        margin:auto;
+        margin-bottom:30px;
+    }
+}
+
+.flexslider-category{
+    margin: 0 0 0px;
+    background: transparent; 
+    border: 4px solid transparent; 
+
+    li{
+        img{
+            width:200px;
+        }
+    }
+
+    .category-btn{
+        background-color: #5ad4db;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        border-radius: 40px;
+        font-size: 20px;
+        width: 250px;
+        font-weight: 700;
+        margin: auto;
+        color: #fff;
+        margin-top: 40px;
+    }
+
+    .flex-direction-nav{
+        display:none;
+    }
+
+    .flex-control-nav{
+        bottom: -50px;
+    }
+
+    .flex-control-paging li a{
+        background-color: $blueOne;
+        pointer-events: none;
+    }
+
+    .flex-control-paging li a.flex-active{
+        background-color:$white;
+    }
+}
+
+
+.category{
+    background-size:cover;
+    transition:all 0.5s;
+    
+    width:250px;
+    height:250px;
+    margin:auto;
+    
+    .icon-select{
+        width: 45px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        opacity: 0;
+        transition:all 0.5s;
+    }
+}
+
+.category-bookshop{
+    background-image: url("../images/icons/bookshop.png");
+}
+
+.selected .category .icon-select{
+    opacity: 1;
+    width: 45px;
+}
+
+.selected .category-bookshop{
+    background-image: url("../images/icons/bookshop-select.png");
+
+    animation: selectedElement 0.5s;
+}
+
+.category-bar{
+    background-image: url("../images/icons/bar.png");
+}
+
+.selected .category-bar{
+    background-image: url("../images/icons/bar-select.png");
+
+    animation: selectedElement 0.5s;
+}
+
+.category-restaurant{
+    background-image: url("../images/icons/restaurant.png");
+}
+
+.selected .category-restaurant{
+    background-image: url("../images/icons/restaurant-select.png");
+
+    animation: selectedElement 0.5s;
+}
+
+.category-coffes{
+    background-image: url("../images/icons/coffe.png");
+}
+
+.selected .category-coffes{
+    background-image: url("../images/icons/coffe-select.png");
+
+    animation: selectedElement 0.5s;
+}
+
+
+
+@keyframes selectedElement{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+@keyframes initialCategory{
+    0%{
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
